@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assign Jason a Task</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+        :root {
+            --primary-bg: #f8f3de;
+            --secondary-bg: #0a0a0d;
+            --primary: #1a6aff;
+            --secondary: #fc5130;
+            --primary-bg-alpha: rgba(248, 243, 222, 0.9);
+            --secondary-bg-alpha: rgba(10, 10, 13, 0.1);
+            --shadow-light: rgba(10, 10, 13, 0.1);
+            --shadow-medium: rgba(10, 10, 13, 0.2);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background-color: var(--primary-bg);
+            color: var(--secondary-bg);
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 800px;
+            margin: 0;
+        }
+
+        .section {
+            padding: 40px 0;
+        }
+
+        .heading_h1 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 1000;
+            color: var(--primary);
+            line-height: 1;
+            margin-bottom: 20px;
+        }
+
+        .heading_h2 {
+            font-size: clamp(1.5rem, 4vw, 2rem);
+            font-weight: 800;
+            color: var(--secondary);
+            line-height: 1;
+            margin-bottom: 25px;
+            margin-top: 40px;
+        }
+
+        .body-text {
+            font-size: clamp(1rem, 2vw, 1.125rem);
+            font-weight: 400;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .button {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--primary), #0d4fb3);
+            color: var(--primary-bg);
+            font-weight: 800;
+            border-radius: 6px;
+            padding: 14px 28px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px var(--shadow-medium);
+            margin: 10px 10px 10px 0;
+            font-size: 1rem;
+        }
+
+        .button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 12px var(--shadow-medium);
+        }
+
+        .button.secondary {
+            background: linear-gradient(135deg, var(--secondary), #d63814);
+        }
+
+        .button.tertiary {
+            background: linear-gradient(135deg, #27ae60, #229954);
+        }
+
+        .button-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .instructions-box {
+            background: rgba(10, 10, 13, 0.03);
+            border: 1px solid rgba(10, 10, 13, 0.15);
+            border-radius: 6px;
+            padding: 25px;
+            margin-top: 30px;
+        }
+
+        .ui-label {
+            font-weight: 700;
+            font-size: 0.875rem;
+            color: var(--secondary-bg);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .code-example {
+            background: rgba(10, 10, 13, 0.05);
+            border-left: 3px solid var(--secondary);
+            padding: 15px;
+            margin: 15px 0;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .section {
+                padding: 25px 0;
+            }
+
+            .button {
+                width: 100%;
+                text-align: center;
+                margin: 10px 0;
+            }
+
+            .button-container {
+                flex-direction: column;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                transition: none !important;
+                animation: none !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <section class="section">
+            <h1 class="heading_h1">Quick Task Assignment</h1>
+            <p class="body-text">
+                Use these quick links to assign Jason a task via email. Each link opens a pre-formatted email with the appropriate subject line.
+            </p>
+
+            <h2 class="heading_h2">Assign Jason a Task</h2>
+            
+            <div class="button-container">
+                <a href="mailto:jason@thesaltlickdenver.com?subject=life&body=due%20date:%0Atask:" class="button">Life Task</a>
+                <a href="mailto:jason@thesaltlickdenver.com?subject=wedding&body=due%20date:%0Atask:" class="button secondary">Wedding Task</a>
+                <a href="mailto:jason@thesaltlickdenver.com?subject=house&body=due%20date:%0Atask:" class="button tertiary">House Task</a>
+            </div>
+
+            <div class="instructions-box">
+                <span class="ui-label">How to Use</span>
+                <p class="body-text">
+                    Click any button above to open a pre-formatted email. Fill in the email body with your task details:
+                </p>
+                <div class="code-example">
+                    due date: 12/25/25<br>
+                    task: Buy Christmas presents
+                </div>
+                <p class="body-text">
+                    Use the date format MM/DD/YY. Don't add any other text. Send!
+                </p>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
